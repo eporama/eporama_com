@@ -1,0 +1,12 @@
+name = Omega Tools
+description = Provides additional functionality for the <a href="http://drupal.org/project/omega">Omega Theme</a>.
+package = Theme Tools
+core = 7.x
+
+files[] = omega_tools.module
+; Information added by drupal.org packaging script on 2011-04-23
+version = "7.x-3.0-beta1"
+core = "7.x"
+project = "omega_tools"
+datestamp = "1303582616"
+

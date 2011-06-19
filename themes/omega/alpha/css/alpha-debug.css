@@ -1,0 +1,77 @@
+.grid-1:hover, .grid-2:hover, .grid-3:hover, .grid-4:hover,
+.grid-5:hover, .grid-6:hover, .grid-7:hover, .grid-8:hover,
+.grid-9:hover, .grid-10:hover, .grid-11:hover, .grid-12:hover,
+.grid-13:hover, .grid-14:hover, .grid-15:hover, .grid-16:hover,
+.grid-17:hover, .grid-18:hover, .grid-19:hover, .grid-20:hover,
+.grid-21:hover, .grid-22:hover, .grid-23:hover, .grid-24:hover {
+  background-color: rgba(0, 115, 186, .2);
+}
+
+.block-alpha-debug {
+  margin: 0 0 10px 0;
+  padding: 9px 12px;
+  color: #000;
+  border: 1px solid #ccc;  
+  background-color: rgba(255, 255, 255, .25);
+  font-family: Verdana, Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+}
+
+.block-alpha-debug h2 {  
+  color: #888;
+  margin: 0;
+  font-family: Verdana, Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+}
+
+.block-alpha-debug .content {
+  display: none;
+}
+
+.region:hover .block-alpha-debug {
+  border: 1px solid #888;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.region:hover .block-alpha-debug .content {
+  display: block;
+}
+
+.region:hover .block-alpha-debug h2 {
+  display: none;
+}
+
+.alpha-resize-indicator {
+  background: url(../images/resize-handle.png) no-repeat 0 0;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  z-index: 998;
+  right: 0;
+  bottom: 0;
+}
+
+.alpha-grid-toggle {
+  background: url(../images/grid-toggle.png) no-repeat 0 0;
+  width: 24px;
+  height: 22px;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 80px;
+}
+
+.alpha-grid-toggle-active {
+  background-position: 0 0;
+}
+
+.alpha-grid-toggle-inactive {
+  background-position: 0 -22px;
+}
+
+.alpha-grid-toggle:hover,
+.alpha-grid-toggle:focus,
+.alpha-grid-toggle:active {
+  width: 55px;
+}
