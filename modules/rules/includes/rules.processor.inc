@@ -39,8 +39,8 @@ abstract class RulesDataProcessor {
   }
 
   /**
-   * Returns whether the current user has permission to edit this instance of
-   * the data processor.
+   * Returns whether the current user has permission to edit this chain of data
+   * processors.
    */
   public function editAccess() {
     return $this->access() && (!isset($this->processor) || $this->processor->editAccess());
@@ -59,12 +59,10 @@ abstract class RulesDataProcessor {
    *   The info about the parameter to prepare the processor for.
    * @param $var_info
    *   An array of info about the available variables.
-   * @param $access_check
-   *   Whether access checks for the processors hould be performed.
    */
-  public static function prepareSetting(&$setting, $param_info, $var_info = array(), $access_check = TRUE) {
+  public static function prepareSetting(&$setting, $param_info, $var_info = array()) {
     $processor = NULL;
-    foreach (self::processors($param_info, $access_check) as $name => $info) {
+    foreach (self::processors($param_info, FALSE) as $name => $info) {
       if (!empty($setting[$name])) {
         $object = new $info['class']($setting[$name], $param_info, $var_info, $processor);
         $processor = $object->getPreparedValue();
@@ -148,6 +146,7 @@ abstract class RulesDataProcessor {
    */
   public function dependencies() {
     $used_processor_info = array_intersect_key($this->processors(), $this->unchain());
+    $modules = array();
     foreach ($used_processor_info as $name => $info) {
       $modules[] = $info['module'];
     }
@@ -166,6 +165,7 @@ abstract class RulesDataProcessor {
     }
     // Note: Don't use the static context to call processors() here as we need a
     // late binding to invoke the input evaluators version, if needed.
+    $return = array();
     foreach ($this->processors() as $name => $info) {
       if (isset($processors[$info['class']])) {
         $return[$name] = $processors[$info['class']];
@@ -208,6 +208,11 @@ abstract class RulesDataProcessor {
   /**
    * Defines the processor form element.
    *
+   * @param $settings
+   *   The settings of the processor.
+   * @param $var_info
+   *   An array of info about the available variables.
+   *
    * @return
    *   A form element structure.
    */
@@ -230,24 +235,34 @@ abstract class RulesDataInputEvaluator extends RulesDataProcessor {
   protected function __construct($setting, $param_info, $var_info = array(), $processor = NULL) {
     $this->setting = TRUE;
     $this->processor = $processor;
-    $this->prepare($setting, $var_info);
+    $this->prepare($setting, $var_info, $param_info);
   }
 
   /**
    * Overridden to generate evaluator $options and invoke evaluate().
    */
   public function process($value, $info, RulesState $state, RulesPlugin $element, $options = NULL) {
-    if (!isset($options)) {
-      $cache = rules_get_cache();
-      $languages = language_list();
-      $options = array_filter(array(
-        'language' => isset($element->settings['language']) && isset($languages[$element->settings['language']]) ? $languages[$element->settings['language']] : NULL,
-        'callback' => isset($cache['data info'][$info['type']]['cleaning callback']) ? $cache['data info'][$info['type']]['cleaning callback'] : FALSE,
-        'sanitize' => !empty($info['sanitize']),
-      ));
-    }
+    $options = isset($options) ? $options : $this->getEvaluatorOptions($info, $state, $element);
     $value = isset($this->processor) ? $this->processor->process($value, $info, $state, $element, $options) : $value;
     return $this->evaluate($value, $options, $state);
+  }
+
+  /**
+   * Generates the evaluator $options.
+   */
+  protected function getEvaluatorOptions($info, $state, $element) {
+    $cache = rules_get_cache();
+    $languages = language_list();
+    $info += array(
+      'cleaning callback' => isset($cache['data info'][$info['type']]['cleaning callback']) ? $cache['data info'][$info['type']]['cleaning callback'] : FALSE,
+      'sanitize' => FALSE,
+    );
+    $options = array_filter(array(
+      'language' => $info['#langcode'] != LANGUAGE_NONE && isset($languages[$info['#langcode']]) ? $languages[$info['#langcode']] : NULL,
+      'callback' => $info['cleaning callback'],
+      'sanitize' => $info['sanitize'],
+    ));
+    return $options;
   }
 
   /**
@@ -255,9 +270,9 @@ abstract class RulesDataInputEvaluator extends RulesDataProcessor {
    * to be the input value to be evaluated later on and is replaced by the
    * suiting processor.
    */
-  public static function prepareSetting(&$setting, $param_info, $var_info = array(), $access_check = TRUE) {
+  public static function prepareSetting(&$setting, $param_info, $var_info = array()) {
     $processor = NULL;
-    foreach (self::evaluators($param_info, $access_check) as $name => $info) {
+    foreach (self::evaluators($param_info, FALSE) as $name => $info) {
       $object = new $info['class']($setting, $param_info, $var_info, $processor);
       $processor = $object->getPreparedValue();
     }
@@ -273,7 +288,7 @@ abstract class RulesDataInputEvaluator extends RulesDataProcessor {
    */
   public static function attachForm(&$form, $settings, $param_info, $var_info, $access_check = TRUE) {
     foreach (self::evaluators($param_info, $access_check) as $name => $info) {
-      $form['help'][$name] = call_user_func(array($info['class'], 'help'), $var_info);
+      $form['help'][$name] = call_user_func(array($info['class'], 'help'), $var_info, $param_info);
       $form['help'][$name]['#weight'] = $info['weight'];
     }
   }
@@ -302,6 +317,9 @@ abstract class RulesDataInputEvaluator extends RulesDataProcessor {
    *   The text to evaluate later on.
    * @param $variables
    *   An array of info about available variables.
+   * @param $param_info
+   *   (optional) An array of information about the handled parameter value.
+   *   For backward compatibility, this parameter is not required.
    */
   abstract public function prepare($text, $variables);
 
@@ -321,6 +339,7 @@ abstract class RulesDataInputEvaluator extends RulesDataProcessor {
    *     should be sanitized.
    * @param RulesState
    *   The rules evaluation state.
+   *
    * @return
    *   The evaluated text.
    */
@@ -331,6 +350,10 @@ abstract class RulesDataInputEvaluator extends RulesDataProcessor {
    *
    * @param $variables
    *   An array of info about available variables.
+   * @param $param_info
+   *   (optional) An array of information about the handled parameter value.
+   *   For backward compatibility, this parameter is not required.
+   *
    * @return
    *   A renderable array.
    */
