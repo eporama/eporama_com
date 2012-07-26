@@ -1,5 +1,5 @@
 name = Alpha
-description = Alpha is the core basetheme for <a href="http://drupal.org/project/omega">Omega</a> and all its subthemes. It includes the most basic features of the Omega theme framework. This theme should not be used directly, instead choose one of the Omega or Alpha starterkits.
+description = Alpha is the core basetheme for <a href="http://drupal.org/project/omega">Omega</a> and all its subthemes. It includes the most basic features of the Omega theme framework. This theme should not be used directly, instead you should create a subtheme based on one of the Omega or Alpha starterkits. Learn more about <a href="http://drupal.org/node/819170">Creating an Omega Subtheme</a> in the <a href="http://drupal.org/node/819164">Omega Handbook</a>.
 core = 7.x
 engine = phptemplate
 screenshot = screenshot.png
@@ -31,15 +31,15 @@ zones[footer] = Footer
 
 css[alpha-reset.css][name] = Reset
 css[alpha-reset.css][description] = Created by <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer</a>.
-css[alpha-reset.css][options][weight] = -100
+css[alpha-reset.css][options][weight] = -20
 
 css[alpha-mobile.css][name] = Mobile
 css[alpha-mobile.css][description] = Default stylesheet for mobile styles.
-css[alpha-mobile.css][options][weight] = -90
+css[alpha-mobile.css][options][weight] = -20
 
 css[alpha-alpha.css][name] = Alpha
 css[alpha-alpha.css][description] = Default styles & resets for Alpha/Omega base theme.
-css[alpha-alpha.css][options][weight] = -80
+css[alpha-alpha.css][options][weight] = -20
 
 ; OPTIONAL LIBRARIES
 
@@ -116,36 +116,8 @@ settings[alpha_viewport_user_scaleable] = ''
 settings[alpha_css][alpha-reset.css] = 'alpha-reset.css'
 settings[alpha_css][alpha-alpha.css] = 'alpha-alpha.css'
 settings[alpha_css][alpha-mobile.css] = 'alpha-mobile.css'
-settings[alpha_exclude][modules/comment/comment.css] = 'modules/comment/comment.css'
-settings[alpha_exclude][modules/field/theme/field.css] = 'modules/field/theme/field.css'
-settings[alpha_exclude][modules/node/node.css] = 'modules/node/node.css'
-settings[alpha_exclude][modules/search/search.css] = 'modules/search/search.css'
-settings[alpha_exclude][modules/user/user.css] = 'modules/user/user.css'
-settings[alpha_exclude][misc/vertical-tabs.css] = '0'
-settings[alpha_exclude][modules/aggregator/aggregator.css] = 'modules/aggregator/aggregator.css'
-settings[alpha_exclude][modules/block/block.css] = 'modules/block/block.css'
-settings[alpha_exclude][modules/dblog/dblog.css] = 'modules/dblog/dblog.css'
-settings[alpha_exclude][modules/file/file.css] = 'modules/file/file.css'
-settings[alpha_exclude][modules/filter/filter.css] = 'modules/filter/filter.css'
-settings[alpha_exclude][modules/help/help.css] = 'modules/help/help.css'
-settings[alpha_exclude][modules/menu/menu.css] = 'modules/menu/menu.css'
-settings[alpha_exclude][modules/openid/openid.css] = 'modules/openid/openid.css'
-settings[alpha_exclude][modules/profile/profile.css] = 'modules/profile/profile.css'
-settings[alpha_exclude][modules/statistics/statistics.css] = 'modules/statistics/statistics.css'
-settings[alpha_exclude][modules/syslog/syslog.css] = 'modules/syslog/syslog.css'
-settings[alpha_exclude][modules/system/admin.css] = 'modules/system/admin.css'
-settings[alpha_exclude][modules/system/maintenance.css] = 'modules/system/maintenance.css'
-settings[alpha_exclude][modules/system/system.css] = 'modules/system/system.css'
-settings[alpha_exclude][modules/system/system.admin.css] = 'modules/system/system.admin.css'
-settings[alpha_exclude][modules/system/system.maintenance.css] = 'modules/system/system.maintenance.css'
-settings[alpha_exclude][modules/system/system.menus.css] = 'modules/system/system.menus.css'
-settings[alpha_exclude][modules/system/system.messages.css] = 'modules/system/system.messages.css'
-settings[alpha_exclude][modules/system/system.theme.css] = '0'
-settings[alpha_exclude][modules/taxonomy/taxonomy.css] = 'modules/taxonomy/taxonomy.css'
-settings[alpha_exclude][modules/tracker/tracker.css] = 'modules/tracker/tracker.css'
-settings[alpha_exclude][modules/update/update.css] = 'modules/update/update.css'
-settings[alpha_exclude][modules/system/system.base.css] = '0'
 settings[alpha_debug_block_toggle] = '1'
+settings[alpha_debug_block_active] = '1'
 settings[alpha_debug_grid_toggle] = '1'
 settings[alpha_debug_grid_active] = '1'
 settings[alpha_debug_grid_roles][1] = '1'
@@ -240,9 +212,9 @@ settings[alpha_region_footer_columns] = '12'
 settings[alpha_region_footer_suffix] = ''
 settings[alpha_region_footer_weight] = ''
 settings[alpha_region_footer_css] = ''
-; Information added by drupal.org packaging script on 2011-06-08
-version = "7.x-3.0-beta1"
+; Information added by drupal.org packaging script on 2012-02-19
+version = "7.x-3.1"
 core = "7.x"
 project = "omega"
-datestamp = "1307539318"
+datestamp = "1329681647"
 

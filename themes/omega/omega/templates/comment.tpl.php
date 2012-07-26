@@ -1,7 +1,4 @@
 <article<?php print $attributes; ?>>
-
-  
-
   <header>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
@@ -14,13 +11,11 @@
     <?php if (isset($unpublished)): ?>
       <em class="unpublished"><?php print $unpublished; ?></em>
     <?php endif; ?>
-    
-    
   </header>
 
   <?php print $picture; ?>
 
-  <footer>
+  <footer class="comment-submitted">
    <?php
       print t('Submitted by !username on !datetime',
       array('!username' => $author, '!datetime' => '<time datetime="' . $datetime . '">' . $created . '</time>'));

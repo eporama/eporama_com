@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * @file
@@ -21,6 +21,8 @@
  *   
  * @see 
  *   theme_get_setting().
+ * 
+ * @deprecated
  */
 function omega_theme_get_setting($name, $default = NULL, $theme = NULL) {
   return alpha_theme_get_setting($name, $default, $theme);
@@ -48,6 +50,8 @@ function omega_theme_get_setting($name, $default = NULL, $theme = NULL) {
  * 
  * @see
  *   theme_get_setting().
+ * 
+ * @deprecated
  */
 function omega_zone_get_setting($name, $zone, $default = NULL, $theme = NULL) {
   return alpha_zone_get_setting($name, $zone, $default, $theme);
@@ -75,22 +79,17 @@ function omega_zone_get_setting($name, $zone, $default = NULL, $theme = NULL) {
  * 
  * @see
  *   theme_get_setting().
+ * 
+ * @deprecated
  */
 function omega_region_get_setting($name, $region, $default = NULL, $theme = NULL) {
   return alpha_region_get_setting($name, $region, $default, $theme);
 }
 
 /**
- * A helper function to gather all non-region and non-zone settings for the
- * theme defined by $key.
- * 
- * @param $key
- *   The key (machin-readable name) of the theme that you want
- *  fetch the settings for.
- *
- * @return
- *   A nested array of theme settings.
+ * @todo
+ * @deprecated
  */
-function omega_settings($theme = NULL) {
-  return alpha_settings($theme);
+function omega_settings() {
+  return alpha_settings();
 }
