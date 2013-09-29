@@ -42,4 +42,3 @@
 # $sites['devexample.com'] = 'example.com';
 # $sites['localhost.example'] = 'example.com';
 $sites['eporama.local'] = 'eporama.com';
-$sites['house.eporama.com'] = 'house';
