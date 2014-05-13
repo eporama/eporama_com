@@ -2,3 +2,7 @@
 #section-header {
 background-image: url(../images/lake.jpg);
 }
+
+pre {
+  font-family: 'courier new', 'courier', monospace;
+}
