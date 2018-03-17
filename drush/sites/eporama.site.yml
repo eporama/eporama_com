@@ -2,8 +2,6 @@
 # Docs at https://github.com/drush-ops/drush/blob/master/examples/example.site.yml
 
 prod:
- host: 159.65.235.42
- user: eporama
  root: /var/www/eporama_web/web
  uri: https://eporama.com
 #
