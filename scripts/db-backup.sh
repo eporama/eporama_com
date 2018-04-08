@@ -8,7 +8,7 @@ BACKUPPATH=$HOMEDIR/backups
 echo "==================" >> ${LOGPATH}/db-backups.log 2>&1
 echo "Running backup: ${RUNTIME}" >> ${LOGPATH}/db-backups.log 2>&1
 
-if [ ! -f $LOGPATH ]; then
+if [ ! -d $LOGPATH ]; then
   echo "creating logpath directory" >> ${LOGPATH}/db-backups.log 2>&1
   mkdir -p $LOGPATH
 fi
