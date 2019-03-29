@@ -160,23 +160,23 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "dev-master",
+            "version": "1.28.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "2e093f5f958b2daf28c9159002f3945d84fb30a9"
+                "reference": "e7ca5d7d2ecb5374988ff636e7546638e91c2201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/2e093f5f958b2daf28c9159002f3945d84fb30a9",
-                "reference": "2e093f5f958b2daf28c9159002f3945d84fb30a9",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/e7ca5d7d2ecb5374988ff636e7546638e91c2201",
+                "reference": "e7ca5d7d2ecb5374988ff636e7546638e91c2201",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=5.5.9",
                 "symfony/console": "^3.4 || ^4.0",
-                "symfony/filesystem": "^3.4 || ^4.0",
+                "symfony/filesystem": "^2.7 || ^3.4 || ^4.0",
                 "twig/twig": "^1.35"
             },
             "bin": [
@@ -201,7 +201,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2019-02-28T18:46:26+00:00"
+            "time": "2019-03-07T06:10:55+00:00"
         },
         {
             "name": "composer/installers",
