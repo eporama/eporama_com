@@ -2049,16 +2049,16 @@
         },
         {
             "name": "drupal-composer/drupal-scaffold",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-scaffold.git",
-                "reference": "0e00601e070c5c71e6d3a6478fa61198e30c2964"
+                "reference": "13c1ffc7dd4925cb03707759128b85c0cd6276f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/0e00601e070c5c71e6d3a6478fa61198e30c2964",
-                "reference": "0e00601e070c5c71e6d3a6478fa61198e30c2964",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/13c1ffc7dd4925cb03707759128b85c0cd6276f8",
+                "reference": "13c1ffc7dd4925cb03707759128b85c0cd6276f8",
                 "shasum": ""
             },
             "require": {
@@ -2089,14 +2089,14 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
-            "time": "2019-03-26T09:14:17+00:00"
+            "time": "2019-03-30T10:41:38+00:00"
         },
         {
             "name": "drupal/captcha",
             "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/captcha",
+                "url": "https://git.drupalcode.org/project/captcha.git",
                 "reference": "8.x-1.0-beta1"
             },
             "dist": {
@@ -2163,7 +2163,7 @@
             "version": "dev-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/codefilter",
+                "url": "https://git.drupalcode.org/project/codefilter.git",
                 "reference": "55054487bd6b77d6784e9d1260d0a4743a5f73e4"
             },
             "require": {
@@ -2712,7 +2712,7 @@
             "version": "1.29.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/honeypot",
+                "url": "https://git.drupalcode.org/project/honeypot.git",
                 "reference": "8.x-1.29"
             },
             "dist": {
@@ -2768,7 +2768,7 @@
             "version": "2.4.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/recaptcha",
+                "url": "https://git.drupalcode.org/project/recaptcha.git",
                 "reference": "8.x-2.4"
             },
             "dist": {
@@ -4100,7 +4100,7 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.23",
+            "version": "v3.4.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
