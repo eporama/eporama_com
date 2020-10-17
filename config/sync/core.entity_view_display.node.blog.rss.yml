@@ -1,0 +1,35 @@
+uuid: 2ae4e6bf-d6e4-4d63-b00e-14cd700fa811
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.blog.body
+    - field.field.node.blog.comment_node_blog
+    - field.field.node.blog.field_attachment
+    - field.field.node.blog.field_keywords
+    - node.type.blog
+  module:
+    - text
+    - user
+id: node.blog.rss
+targetEntityType: node
+bundle: blog
+mode: rss
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_blog: true
+  field_attachment: true
+  field_keywords: true

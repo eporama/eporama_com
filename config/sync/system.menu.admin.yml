@@ -1,0 +1,8 @@
+uuid: 534f3864-cfe4-418a-be07-7aeeb7e6a8c0
+langcode: en
+status: true
+dependencies: {  }
+id: admin
+label: Admin
+description: 'Admin links.'
+locked: true

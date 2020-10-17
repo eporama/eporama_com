@@ -1,0 +1,25 @@
+uuid: 1b52c6cb-5aa2-40a2-a086-bd9ffb27899a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - eporamafied
+id: eporamafied_tools
+theme: eporamafied
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

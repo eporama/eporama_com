@@ -1,0 +1,18 @@
+uuid: 6f346ce0-cd0f-411c-ae24-36a3bdabde4c
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'authenticated user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'create blog entries'
+  - 'delete own blog content'
+  - 'edit own blog content'
+  - 'post comments'
+  - 'use text format 1'
+  - 'view own unpublished content'

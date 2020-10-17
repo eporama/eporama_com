@@ -1,0 +1,31 @@
+uuid: d094a8d1-9469-4d66-ba08-8de304396424
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6f4dfe9a-0a5d-4c96-9e47-71d893e149dd'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: twitterfeed
+theme: bartik
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'block_content:6f4dfe9a-0a5d-4c96-9e47-71d893e149dd'
+settings:
+  id: 'block_content:6f4dfe9a-0a5d-4c96-9e47-71d893e149dd'
+  label: 'Twitter feed'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/ramblings/*\r\n/node/add/*\r\n/admin/*\r\n/admin"
+    negate: true
+    context_mapping: {  }

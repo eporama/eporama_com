@@ -1,0 +1,20 @@
+uuid: ece8cfee-7060-4497-8c00-c818446aa412
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+id: eporama_system_main
+theme: bartik
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

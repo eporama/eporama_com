@@ -1,0 +1,20 @@
+uuid: ae68b5f7-d6a3-4719-a167-ed3c586505f5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eporamafied
+id: eporamafied_local_tasks
+theme: eporamafied
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

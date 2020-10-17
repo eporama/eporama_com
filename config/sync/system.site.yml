@@ -1,0 +1,13 @@
+uuid: e9e74406-df79-44de-ac15-210d47054e50
+name: 'Erik''s Place'
+mail: eporama@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /ramblings
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+mail_notification: ''

@@ -1,0 +1,20 @@
+uuid: 16ec54ec-224d-404a-b400-bafd2e6a3ce5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+id: eporama_system_powered-by
+theme: bartik
+region: footer_first
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: visible
+visibility: {  }

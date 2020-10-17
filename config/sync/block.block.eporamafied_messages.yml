@@ -1,0 +1,20 @@
+uuid: 0be13b78-fdcb-4923-ab4b-6b2f5cd5151c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eporamafied
+id: eporamafied_messages
+theme: eporamafied
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

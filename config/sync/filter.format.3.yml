@@ -1,0 +1,8 @@
+uuid: ba38979e-711e-4636-9e06-6ef42b394dd4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Migrate example format'
+format: '3'
+weight: 0
+filters: {  }

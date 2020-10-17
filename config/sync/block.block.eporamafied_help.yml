@@ -1,0 +1,20 @@
+uuid: 63b1b10e-7af0-4c4b-9d28-c3d4273f878c
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - eporamafied
+id: eporamafied_help
+theme: eporamafied
+region: content
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

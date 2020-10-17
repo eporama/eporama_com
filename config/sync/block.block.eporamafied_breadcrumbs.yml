@@ -1,0 +1,20 @@
+uuid: 2ce117ac-44ea-4be5-9de9-83f9e998a999
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eporamafied
+id: eporamafied_breadcrumbs
+theme: eporamafied
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

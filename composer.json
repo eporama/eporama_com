@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/honeypot": "^1.30",
+        "drupal/olivero": "^1.0@beta",
         "drupal/recaptcha": "^3",
         "drush/drush": "^10.2"
     },

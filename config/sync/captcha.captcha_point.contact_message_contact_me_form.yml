@@ -1,0 +1,7 @@
+uuid: 50d20a70-dad9-4532-805a-6b01731014fe
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_message_contact_me_form
+captchaType: recaptcha/reCAPTCHA
+label: contact_message_contact_me_form

@@ -1,0 +1,8 @@
+uuid: 72881293-5416-4a5f-ab03-3c67bb699b7c
+langcode: en
+status: true
+dependencies: {  }
+name: Keywords
+vid: keywords
+description: 'Site global keywords for posts'
+weight: 0

@@ -1,0 +1,12 @@
+uuid: c2ee4c05-cb6d-40ce-b362-98938c6ccbe0
+langcode: en
+status: true
+dependencies: {  }
+id: contact_me
+label: 'Contact Me'
+recipients:
+  - eporama@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

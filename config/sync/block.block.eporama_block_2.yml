@@ -1,0 +1,31 @@
+uuid: 8a2e83bc-1891-47d5-b300-c51307cd8dfb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e28253aa-990e-45d4-bc60-96a83d2e221c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: eporama_block_2
+theme: bartik
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'block_content:e28253aa-990e-45d4-bc60-96a83d2e221c'
+settings:
+  id: 'block_content:e28253aa-990e-45d4-bc60-96a83d2e221c'
+  label: 'DA badge'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/ramblings/*\r\n/node/add/*\r\n/admin/*\r\n/admin"
+    context_mapping: {  }
