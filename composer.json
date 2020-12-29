@@ -17,11 +17,10 @@
     "require": {
         "composer/installers": "^1.2",
         "drupal/codefilter": "1.x-dev",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core-project-message": "^9.1",
+        "drupal/core-recommended": "^9.1",
         "drupal/honeypot": "^1.30",
-        "drupal/olivero": "^1.0@beta",
         "drupal/recaptcha": "^3",
         "drush/drush": "^10.2"
     },
