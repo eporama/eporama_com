@@ -21,7 +21,7 @@
 /.idea/
 
 # Ignore .env files as they are personal
-/.phpenv
+/.php-version
 /.env
 /.editorconfig
 /.gitattributes
