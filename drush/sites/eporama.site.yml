@@ -7,4 +7,9 @@ prod:
 #
 local:
  root: /Users/erik/src/eporama_com
- uri: http://127.0.0.1:8888
+ uri: http://127.0.0.1:9898
+ command:
+   runserver:
+     options:
+       default-server: '127.0.0.1:9898/admin'
+
