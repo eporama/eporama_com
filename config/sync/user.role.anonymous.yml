@@ -10,5 +10,4 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'post comments'
   - 'use text format 1'
