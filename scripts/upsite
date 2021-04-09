@@ -1,0 +1,25 @@
+#!/bin/bash
+
+DRUSH=/var/www/eporama_web/vendor/bin/drush
+
+echo "Rsyncing files"
+rsync \
+    --exclude=.git \
+    --exclude=web/sites/default/settings.local.php \
+    --exclude=web/sites/default/files/css \
+    --exclude=web/sites/default/files/js \
+    --exclude=files/php \
+    --recursive \
+    --times \
+    --links \
+    /home/eporama/eporama_com/ /var/www/eporama_web/
+echo ""
+echo "Restarting Apache"
+    sudo service apache2 restart
+echo ""
+echo "Drush db updates and cache rebuild"
+    ${DRUSH} @eporama.prod cim --yes
+    ${DRUSH} @eporama.prod updb --yes
+    ${DRUSH} @eporama.prod cr
+echo ""
+echo "Finished"
