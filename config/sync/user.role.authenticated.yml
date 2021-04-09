@@ -13,6 +13,5 @@ permissions:
   - 'create blog entries'
   - 'delete own blog content'
   - 'edit own blog content'
-  - 'post comments'
   - 'use text format 1'
   - 'view own unpublished content'
