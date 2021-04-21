@@ -1,14 +1,15 @@
 # Edit or remove this file as needed.
 # Docs at https://github.com/drush-ops/drush/blob/master/examples/example.site.yml
 
-#prod:
-#  host: prod.domain.com
-#  user: www-admin
-#  root: /path/to/drupal
-#  uri: http://www.example.com
+prod:
+ root: /var/www/eporama_com/web
+ uri: https://eporama.com
 #
-#stage:
-#  host: stage.domain.com
-#  user: www-admin
-#  root: /path/to/drupal
-#  uri: http://stage.example.com
+local:
+ root: /Users/erik/src/eporama_com
+ uri: http://127.0.0.1:9898
+ command:
+   runserver:
+     options:
+       default-server: '127.0.0.1:9898/admin'
+
