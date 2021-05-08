@@ -21,10 +21,9 @@
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/honeypot": "^1.30",
+        "drupal/pathauto": "^1.8",
         "drupal/recaptcha": "^3",
         "drush/drush": "^10.2"
-    },
-    "require-dev": {
     },
     "conflict": {
         "drupal/drupal": "*"
