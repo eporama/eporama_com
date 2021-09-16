@@ -22,7 +22,7 @@ fi
 
 # Create a gzipped sql dump.
 echo "running sql-dump" >> ${LOG} 2>&1
-${WEBDIR}}/vendor/bin/drush sql-dump --structure-tables-key=common --root=${WEBDIR}}/web --uri=eporama.com  --gzip --result-file=${BACKUPPATH}/eporama-$(date +%F).sql >> ${LOG} 2>&1
+${WEBDIR}/vendor/bin/drush sql-dump --structure-tables-key=common --root=${WEBDIR}/web --uri=eporama.com  --gzip --result-file=${BACKUPPATH}/eporama-$(date +%F).sql >> ${LOG} 2>&1
 
 # Send the backup to S3 for safe keeping
 echo "sending backup to s3cmd" >> ${LOG} 2>&1
