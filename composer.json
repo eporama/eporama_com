@@ -24,7 +24,7 @@
         "drupal/honeypot": "^1.30",
         "drupal/pathauto": "^1.8",
         "drupal/recaptcha": "^3",
-        "drush/drush": "^10.2"
+        "drush/drush": "*"
     },
     "conflict": {
         "drupal/drupal": "*"
