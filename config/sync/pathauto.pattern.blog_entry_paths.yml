@@ -11,12 +11,12 @@ pattern: 'ramblings/[node:title]'
 selection_criteria:
   237690ff-418e-4625-97c7-ae2ebb0cc8c2:
     id: node_type
-    bundles:
-      blog: blog
     negate: false
+    uuid: 237690ff-418e-4625-97c7-ae2ebb0cc8c2
     context_mapping:
       node: node
-    uuid: 237690ff-418e-4625-97c7-ae2ebb0cc8c2
+    bundles:
+      blog: blog
 selection_logic: and
 weight: -5
 relationships: {  }

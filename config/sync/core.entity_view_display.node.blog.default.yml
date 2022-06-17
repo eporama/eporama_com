@@ -20,40 +20,40 @@ bundle: blog
 mode: default
 content:
   body:
-    label: hidden
-    weight: 1
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   comment_node_blog:
-    label: above
     type: comment_default
-    weight: 20
+    label: above
     settings:
-      pager_id: 0
       view_mode: default
+      pager_id: 0
     third_party_settings: {  }
+    weight: 20
     region: content
   field_attachment:
-    label: above
-    weight: 2
     type: file_default
+    label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
+    weight: 2
     region: content
   field_keywords:
-    label: above
-    weight: 3
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 3
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden: {  }

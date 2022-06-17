@@ -18,17 +18,17 @@ bundle: blog
 mode: rss
 content:
   body:
-    label: hidden
-    weight: 1
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   comment_node_blog: true
   field_attachment: true

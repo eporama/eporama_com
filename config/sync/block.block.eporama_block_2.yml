@@ -18,8 +18,8 @@ plugin: 'block_content:e28253aa-990e-45d4-bc60-96a83d2e221c'
 settings:
   id: 'block_content:e28253aa-990e-45d4-bc60-96a83d2e221c'
   label: 'DA badge'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -27,5 +27,5 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/ramblings/*\r\n/node/add/*\r\n/admin/*\r\n/admin"
     context_mapping: {  }
+    pages: "/ramblings/*\r\n/node/add/*\r\n/admin/*\r\n/admin"

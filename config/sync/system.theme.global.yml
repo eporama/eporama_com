@@ -7,8 +7,8 @@ features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
-  node_user_picture: false
   logo: true
+  node_user_picture: false
 logo:
   path: 'public://eporama.jpg'
   url: ''

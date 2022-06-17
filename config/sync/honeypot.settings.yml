@@ -1,10 +1,12 @@
+_core:
+  default_config_hash: jEhrePho9bAz_8-E-zPMXvlx4knpphzUdaiQJX-xc8Q
+protect_all_forms: true
 unprotected_forms:
   - user_login_form
   - search_form
   - search_block_form
   - views_exposed_form
   - honeypot_settings_form
-protect_all_forms: true
 log: true
 element_name: url
 time_limit: 2
@@ -20,5 +22,3 @@ form_settings:
   comment_comment_form: false
   comment_comment_node_blog_form: false
   comment_comment_node_page_form: false
-_core:
-  default_config_hash: jEhrePho9bAz_8-E-zPMXvlx4knpphzUdaiQJX-xc8Q

@@ -1,7 +1,14 @@
 uuid: 352552f3-8a1a-4759-9c02-2ff30ec8a55b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.1
+  module:
+    - comment
+    - contact
+    - filter
+    - system
 id: anonymous
 label: 'anonymous user'
 weight: 0

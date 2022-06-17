@@ -18,14 +18,14 @@ plugin: 'block_content:6f4dfe9a-0a5d-4c96-9e47-71d893e149dd'
 settings:
   id: 'block_content:6f4dfe9a-0a5d-4c96-9e47-71d893e149dd'
   label: 'Twitter feed'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: "/ramblings/*\r\n/node/add/*\r\n/admin/*\r\n/admin"
     negate: true
     context_mapping: {  }
+    pages: "/ramblings/*\r\n/node/add/*\r\n/admin/*\r\n/admin"
