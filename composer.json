@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.7",
         "drupal/codefilter": "1.x-dev",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
@@ -36,7 +37,8 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "cweagans/composer-patches": true
         }
     },
     "extra": {
@@ -73,6 +75,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/captcha": {
+                "php8.1 deprecation warning function: trim(): Passing null to parameter #1": "https://www.drupal.org/files/issues/2022-07-21/fix-warning-message-3298766-6.patch"
+            }
         }
     }
 }
