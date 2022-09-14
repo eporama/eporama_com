@@ -77,9 +77,6 @@
             ]
         },
         "patches": {
-            "drupal/captcha": {
-                "php8.1 deprecation warning function: trim(): Passing null to parameter #1": "https://www.drupal.org/files/issues/2022-07-21/fix-warning-message-3298766-6.patch"
-            }
         }
     }
 }
