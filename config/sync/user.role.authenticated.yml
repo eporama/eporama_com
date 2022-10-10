@@ -8,7 +8,6 @@ dependencies:
   module:
     - comment
     - contact
-    - environment_indicator
     - filter
     - node
     - system
@@ -19,7 +18,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access environment indicator'
   - 'access site-wide contact form'
   - 'delete own blog content'
   - 'edit own blog content'

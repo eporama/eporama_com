@@ -1,20 +1,11 @@
 uuid: 98fce37d-c436-4235-a200-a9e143df6904
 langcode: en
 status: true
-dependencies:
-  module:
-    - codefilter
+dependencies: {  }
 name: 'Filtered HTML'
 format: '1'
 weight: 0
 filters:
-  codefilter:
-    id: codefilter
-    provider: codefilter
-    status: true
-    weight: 0
-    settings:
-      nowrap_expand: '0'
   filter_autop:
     id: filter_autop
     provider: filter

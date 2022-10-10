@@ -1,17 +1,8 @@
 uuid: ea95248c-9ac5-4ba4-8100-0d0d041f971c
 langcode: en
 status: true
-dependencies:
-  module:
-    - codefilter
+dependencies: {  }
 name: 'Raw HTML'
 format: raw_html
 weight: 0
-filters:
-  codefilter:
-    id: codefilter
-    provider: codefilter
-    status: true
-    weight: 0
-    settings:
-      nowrap_expand: '0'
+filters: {  }
