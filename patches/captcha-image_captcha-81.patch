@@ -1,0 +1,63 @@
+diff --git a/image_captcha/src/Response/CaptchaImageResponse.php b/image_captcha/src/Response/CaptchaImageResponse.php
+index d362748..d2182cc 100755
+--- a/image_captcha/src/Response/CaptchaImageResponse.php
++++ b/image_captcha/src/Response/CaptchaImageResponse.php
+@@ -68,7 +68,7 @@ class CaptchaImageResponse extends Response {
+   /**
+    * {@inheritdoc}
+    */
+-  public function prepare(Request $request) {
++  public function prepare(Request $request): static {
+     $session_id = $request->get('session_id');
+ 
+     $code = $this->connection
+@@ -92,7 +92,7 @@ class CaptchaImageResponse extends Response {
+   /**
+    * {@inheritdoc}
+    */
+-  public function sendHeaders() {
++  public function sendHeaders(): static  {
+     if ($this->config->get('image_captcha_file_format') == IMAGE_CAPTCHA_FILE_FORMAT_JPG) {
+       $this->headers->set('content-type', 'image/jpeg');
+     }
+@@ -107,9 +107,9 @@ class CaptchaImageResponse extends Response {
+   /**
+    * {@inheritdoc}
+    */
+-  public function sendContent() {
++  public function sendContent(): static {
+     if (!$this->image) {
+-      return;
++      return null;
+     }
+ 
+     // Begin capturing the byte stream.
+@@ -122,6 +122,7 @@ class CaptchaImageResponse extends Response {
+     else {
+       imagepng($this->image);
+     }
++    return $this;
+     // Clean up the image resource.
+     imagedestroy($this->image);
+   }
+diff --git a/image_captcha/src/StreamedResponse/CaptchaFontPreviewStreamedResponse.php b/image_captcha/src/StreamedResponse/CaptchaFontPreviewStreamedResponse.php
+index 4fe5388..225b149 100755
+--- a/image_captcha/src/StreamedResponse/CaptchaFontPreviewStreamedResponse.php
++++ b/image_captcha/src/StreamedResponse/CaptchaFontPreviewStreamedResponse.php
+@@ -37,7 +37,7 @@ class CaptchaFontPreviewStreamedResponse extends StreamedResponse {
+   /**
+    * {@inheritdoc}
+    */
+-  public function sendContent() {
++  public function sendContent(): static {
+     // Get the font from the given font token.
+     if ($this->token == 'BUILTIN') {
+       $font = 'BUILTIN';
+@@ -83,6 +83,7 @@ class CaptchaFontPreviewStreamedResponse extends StreamedResponse {
+     $this->headers->set('Content-Type', 'image/png');
+     // Dump image data to client.
+     imagepng($image);
++    return $this;
+     // Release image memory.
+     imagedestroy($image);
+   }

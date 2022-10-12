@@ -79,6 +79,9 @@
             ]
         },
         "patches": {
+            "drupal/captcha": {
+                "make image_captcha 8.1 compatible": "patches/captcha-image_captcha-81.patch"
+            }
         },
         "drupal-lenient": {
             "allowed-list": ["drupal/codefilter"]
