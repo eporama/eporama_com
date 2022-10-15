@@ -18,11 +18,13 @@ class PolicyCommands extends DrushCommands {
    *
    * @throws \Exception
    */
-  public function sqlSyncValidate(CommandData $commandData) {
-    if ($commandData->input()->getArgument('destination') == '@prod') {
-      throw new \Exception(dt('Per !file, you may never overwrite the production database.', ['!file' => __FILE__]));
-    }
-  }
+  /**
+   * public function sqlSyncValidate(CommandData $commandData) {
+   *  if ($commandData->input()->getArgument('destination') == '@prod') {
+   *    throw new \Exception(dt('Per !file, you may never overwrite the production database.', ['!file' => __FILE__]));
+   *  }
+   * }
+   */
 
   /**
    * Limit rsync operations to production site.
@@ -31,9 +33,11 @@ class PolicyCommands extends DrushCommands {
    *
    * @throws \Exception
    */
-  public function rsyncValidate(CommandData $commandData) {
-    if (preg_match("/^@prod/", $commandData->input()->getArgument('destination'))) {
-      throw new \Exception(dt('Per !file, you may never rsync to the production site.', ['!file' => __FILE__]));
-    }
-  }
+  /**
+   * public function rsyncValidate(CommandData $commandData) {
+   *   if (preg_match("/^@prod/", $commandData->input()->getArgument('destination'))) {
+   *     throw new \Exception(dt('Per !file, you may never rsync to the production site.', ['!file' => __FILE__]));
+   *   }
+   * }
+   */
 }
