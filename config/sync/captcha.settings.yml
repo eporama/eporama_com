@@ -9,6 +9,6 @@ whitelist_ips: ''
 add_captcha_description: true
 wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
 default_validation: 1
-persistence: 1
-enable_stats: false
-log_wrong_responses: false
+persistence: 0
+enable_stats: true
+log_wrong_responses: true
