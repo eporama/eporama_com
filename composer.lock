@@ -1198,16 +1198,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.0.0-rc2",
+            "version": "10.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "396e2e48a375d259f94d52e7af0eedcb520e1e98"
+                "reference": "c91e3be9e91f3d1a8f2ac9751b902f523cb1fab3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/396e2e48a375d259f94d52e7af0eedcb520e1e98",
-                "reference": "396e2e48a375d259f94d52e7af0eedcb520e1e98",
+                "url": "https://api.github.com/repos/drupal/core/zipball/c91e3be9e91f3d1a8f2ac9751b902f523cb1fab3",
+                "reference": "c91e3be9e91f3d1a8f2ac9751b902f523cb1fab3",
                 "shasum": ""
             },
             "require": {
@@ -1350,13 +1350,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.0.0-rc2"
+                "source": "https://github.com/drupal/core/tree/10.0.0-rc3"
             },
-            "time": "2022-12-06T09:47:10+00:00"
+            "time": "2022-12-09T13:01:05+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.0.0-rc2",
+            "version": "10.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1400,13 +1400,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.0.0-rc2"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.0.0-rc3"
             },
             "time": "2022-07-01T08:33:05+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "10.0.0-rc2",
+            "version": "10.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1441,22 +1441,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/10.0.0-rc2"
+                "source": "https://github.com/drupal/core-project-message/tree/10.0.0-rc3"
             },
             "time": "2022-07-01T08:33:05+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "10.0.0-rc2",
+            "version": "10.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "6861d8be8f54eee410137aee9012248019c597c8"
+                "reference": "e4582a46a00fb3f623084c80f62ee91ca2c5b7fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/6861d8be8f54eee410137aee9012248019c597c8",
-                "reference": "6861d8be8f54eee410137aee9012248019c597c8",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/e4582a46a00fb3f623084c80f62ee91ca2c5b7fd",
+                "reference": "e4582a46a00fb3f623084c80f62ee91ca2c5b7fd",
                 "shasum": ""
             },
             "require": {
@@ -1464,7 +1464,7 @@
                 "composer/semver": "~3.3.2",
                 "doctrine/annotations": "~1.13.3",
                 "doctrine/lexer": "~1.2.3",
-                "drupal/core": "10.0.0-rc2",
+                "drupal/core": "10.0.0-rc3",
                 "egulias/email-validator": "~3.2.1",
                 "guzzlehttp/guzzle": "~7.5.0",
                 "guzzlehttp/promises": "~1.5.2",
@@ -1482,14 +1482,14 @@
                 "psr/http-message": "~1.0.1",
                 "psr/log": "~3.0.0",
                 "ralouphie/getallheaders": "~3.0.3",
-                "symfony/console": "~v6.2.0",
-                "symfony/dependency-injection": "~v6.2.0",
+                "symfony/console": "~v6.2.1",
+                "symfony/dependency-injection": "~v6.2.1",
                 "symfony/deprecation-contracts": "~v3.1.1",
-                "symfony/error-handler": "~v6.2.0",
+                "symfony/error-handler": "~v6.2.1",
                 "symfony/event-dispatcher": "~v6.2.0",
                 "symfony/event-dispatcher-contracts": "~v3.1.1",
-                "symfony/http-foundation": "~v6.2.0",
-                "symfony/http-kernel": "~v6.2.0",
+                "symfony/http-foundation": "~v6.2.1",
+                "symfony/http-kernel": "~v6.2.1",
                 "symfony/mime": "~v6.2.0",
                 "symfony/polyfill-ctype": "~v1.27.0",
                 "symfony/polyfill-iconv": "~v1.27.0",
@@ -1500,13 +1500,13 @@
                 "symfony/process": "~v6.2.0",
                 "symfony/psr-http-message-bridge": "~v2.1.4",
                 "symfony/routing": "~v6.2.0",
-                "symfony/serializer": "~v6.2.0",
+                "symfony/serializer": "~v6.2.1",
                 "symfony/service-contracts": "~v3.1.1",
                 "symfony/string": "~v6.2.0",
                 "symfony/translation-contracts": "~v3.1.1",
                 "symfony/validator": "~v6.2.0",
-                "symfony/var-dumper": "~v6.2.0",
-                "symfony/var-exporter": "~v6.2.0",
+                "symfony/var-dumper": "~v6.2.1",
+                "symfony/var-exporter": "~v6.2.1",
                 "symfony/yaml": "~v6.2.0",
                 "twig/twig": "~v3.4.3"
             },
@@ -1520,9 +1520,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/10.0.0-rc2"
+                "source": "https://github.com/drupal/core-recommended/tree/10.0.0-rc3"
             },
-            "time": "2022-12-06T09:47:10+00:00"
+            "time": "2022-12-09T13:01:05+00:00"
         },
         {
             "name": "drupal/ctools",
