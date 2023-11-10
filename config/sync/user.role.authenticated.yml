@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - file
     - filter
     - node
     - system
@@ -20,6 +21,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'delete own blog content'
+  - 'delete own files'
   - 'edit own blog content'
   - 'use text format 1'
   - 'view own unpublished content'
