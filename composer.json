@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/antibot": "^2.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
@@ -27,6 +28,7 @@
         "drupal/honeypot": "^2.1",
         "drupal/pathauto": "^1.11",
         "drupal/token": "^1.11",
+        "drupal/toolbar_menu": "^3.0",
         "drush/drush": "*",
         "mglaman/composer-drupal-lenient": "^1.0"
     },
