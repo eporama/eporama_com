@@ -22,6 +22,8 @@
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/environment_indicator": "^4.0",
+        "drupal/gin": "^3.0@rc",
+        "drupal/gin_toolbar": "^1.0@rc",
         "drupal/honeypot": "^2.1",
         "drupal/pathauto": "^1.11",
         "drupal/token": "^1.11",

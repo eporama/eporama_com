@@ -1,0 +1,6 @@
+name: eporama-com
+recipe: drupal10
+config:
+  webroot: web
+  php: "8.2"
+  database: "mariadb"
