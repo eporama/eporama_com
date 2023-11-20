@@ -1,8 +1,8 @@
 _core:
   default_config_hash: 1jZtSc2CSiEBA45nbX0wMKFY3bmcilIwOBQCKFscK0U
 tags: 'code blockcode'
-use_format_specific_options: true
-default_highlighting: GESHIFILTER_DEFAULT_DONOTHING
+use_format_specific_options: false
+default_highlighting: GESHIFILTER_DEFAULT_PLAINTEXT
 default_line_numbering: 0
 use_highlight_string_for_php: false
 decode_entities: false
