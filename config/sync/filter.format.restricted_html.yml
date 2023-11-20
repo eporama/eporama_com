@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - codefilter
     - editor
 name: 'Restricted HTML'
 format: restricted_html
@@ -31,13 +30,6 @@ filters:
     weight: -48
     settings:
       filter_url_length: 72
-  codefilter:
-    id: codefilter
-    provider: codefilter
-    status: true
-    weight: -50
-    settings:
-      nowrap_expand: '0'
   editor_file_reference:
     id: editor_file_reference
     provider: editor
@@ -73,4 +65,10 @@ filters:
     provider: filter
     status: false
     weight: -42
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -44
     settings: {  }

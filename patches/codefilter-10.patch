@@ -1,0 +1,12 @@
+diff --git a/codefilter.info.yml b/codefilter.info.yml
+index 2ec3fab..0829f47 100644
+--- a/codefilter.info.yml
++++ b/codefilter.info.yml
+@@ -1,6 +1,5 @@
+ name: Code Filter
+ type: module
+ description: Provides tags for automatically escaping and formatting large pieces of code.
+-core: 8.x
+-core_version_requirement: ^8 || ^9
++core_version_requirement: '>=8.9 <11'
+ package: User interface
