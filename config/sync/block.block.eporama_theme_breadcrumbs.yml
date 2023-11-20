@@ -1,0 +1,22 @@
+uuid: 54166018-1fad-46f2-abb7-49fa068191cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eporama_theme
+_core:
+  default_config_hash: XMsRP1YhWAcorbrFWZglMYJ_SgWHyF3fyCh5vDXaUN4
+id: eporama_theme_breadcrumbs
+theme: eporama_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

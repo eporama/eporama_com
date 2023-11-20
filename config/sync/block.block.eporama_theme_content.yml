@@ -1,0 +1,22 @@
+uuid: c99353b6-f8a0-4dd3-843d-ee310c1a039f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eporama_theme
+_core:
+  default_config_hash: BL6Gcw5Us0zai1ADadlNYLxlEblMedc_3C3lF0PjtCE
+id: eporama_theme_content
+theme: eporama_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

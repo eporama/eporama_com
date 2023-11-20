@@ -1,0 +1,28 @@
+_core:
+  default_config_hash: 1jZtSc2CSiEBA45nbX0wMKFY3bmcilIwOBQCKFscK0U
+tags: 'code blockcode'
+use_format_specific_options: true
+default_highlighting: GESHIFILTER_DEFAULT_DONOTHING
+default_line_numbering: 0
+use_highlight_string_for_php: false
+decode_entities: false
+enable_keyword_urls: true
+css_mode: 1
+code_container: '2'
+tag_styles:
+  1: 1
+  2: 2
+  16: 16
+  4: 0
+  8: 0
+tab_width: 4
+language:
+  php:
+    enabled: true
+    tags: php
+  cpp:
+    enabled: true
+    tags: cpp
+  java:
+    enabled: true
+    tags: java
