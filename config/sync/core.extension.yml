@@ -13,6 +13,7 @@ module:
   datetime: 0
   dblog: 0
   editor: 0
+  entity_update: 0
   environment_indicator: 0
   field: 0
   field_ui: 0

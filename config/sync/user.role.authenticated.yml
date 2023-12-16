@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.1
+    - filter.format.basic_html
     - node.type.blog
   module:
     - comment
@@ -28,5 +29,6 @@ permissions:
   - 'edit own blog content'
   - 'revert blog revisions'
   - 'use text format 1'
+  - 'use text format basic_html'
   - 'view blog revisions'
   - 'view own unpublished content'

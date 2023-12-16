@@ -11,5 +11,5 @@ features:
   node_user_picture: false
 logo:
   path: 'public://eporama.jpg'
-  url: ''
+  url: null
   use_default: false
