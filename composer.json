@@ -23,6 +23,7 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/entity_update": "^3.0",
         "drupal/environment_indicator": "^4.0",
         "drupal/geshifilter": "3.0.x-dev@dev",
         "drupal/gin": "^3.0@rc",
