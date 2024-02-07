@@ -4,3 +4,8 @@ config:
   webroot: web
   php: "8.2"
   database: "mariadb"
+services:
+  database:
+    type: mariadb
+    config:
+      database: lando_config/my.cnf
