@@ -2,7 +2,7 @@ name: eporama-com
 recipe: drupal10
 config:
   webroot: web
-  php: "8.2"
+  php: "8.3"
   database: "mariadb"
 services:
   database:
