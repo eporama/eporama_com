@@ -54,9 +54,6 @@
     },
     "extra": {
 		"patches": {
-			"drupal/codefilter": {
-				"D11 initial patch": "https://www.drupal.org/files/issues/2024-03-16/codefilter.2.0.0-alpha3.rector.patch"
-			},
 			"drupal/geshifilter": {
 				"D11 patch": "https://www.drupal.org/files/issues/2024-04-04/geshifilter.3.0.x-dev.rector.patch"
 			},

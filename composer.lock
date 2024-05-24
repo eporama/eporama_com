@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1eefe803b836b1c8819a01d4b12ded0",
+    "content-hash": "c7792c966bf01f88e5f1a954c5e838b9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1189,17 +1189,17 @@
         },
         {
             "name": "drupal/codefilter",
-            "version": "2.0.0-alpha3",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/codefilter.git",
-                "reference": "2.0.0-alpha3"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/codefilter-2.0.0-alpha3.zip",
-                "reference": "2.0.0-alpha3",
-                "shasum": "1ace7831007d108cfb7671165e39bf71e0859a34"
+                "url": "https://ftp.drupal.org/files/projects/codefilter-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "8994718b5192de346ac24665b892f7a19e00658b"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
@@ -1207,11 +1207,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-alpha3",
-                    "datestamp": "1691526216",
+                    "version": "2.0.0",
+                    "datestamp": "1716562129",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
