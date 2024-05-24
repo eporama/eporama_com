@@ -1,0 +1,26 @@
+diff --git a/environment_indicator.info.yml b/environment_indicator.info.yml
+index 097b644..76d8ae4 100644
+--- a/environment_indicator.info.yml
++++ b/environment_indicator.info.yml
+@@ -2,7 +2,7 @@ name: Environment indicator
+ type: module
+ description: Adds a color indicator for the different environments.
+ package: Development
+-core_version_requirement: ^9.2 || ^10
++core_version_requirement: ^9.2 || ^10 || ^11
+ 
+ scripts:
+   - js/environment_indicator.js
+diff --git a/modules/environment_indicator_ui/environment_indicator_ui.info.yml b/modules/environment_indicator_ui/environment_indicator_ui.info.yml
+index 2d94352..73bb89b 100644
+--- a/modules/environment_indicator_ui/environment_indicator_ui.info.yml
++++ b/modules/environment_indicator_ui/environment_indicator_ui.info.yml
+@@ -2,7 +2,7 @@ name: Environment indicator UI
+ type: module
+ description: Provides a UI for environment indicator toolbar configurations.
+ package: Development
+-core_version_requirement: ^9.2 || ^10
++core_version_requirement: ^9.2 || ^10 || ^11
+ dependencies:
+   - environment_indicator:environment_indicator
+ 

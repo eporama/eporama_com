@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6251228b4873c7e4947b2e84742eea1e",
+    "content-hash": "b1eefe803b836b1c8819a01d4b12ded0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "32beb00b6b1dbeb1cb2d12c6ce3185af2c61b027"
+                "reference": "b81e31c757ca8fe58936d81e0239d8074af93a5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/32beb00b6b1dbeb1cb2d12c6ce3185af2c61b027",
-                "reference": "32beb00b6b1dbeb1cb2d12c6ce3185af2c61b027",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/b81e31c757ca8fe58936d81e0239d8074af93a5c",
+                "reference": "b81e31c757ca8fe58936d81e0239d8074af93a5c",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 "issues": "https://github.com/Chi-teck/drupal-code-generator/issues",
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/4.x"
             },
-            "time": "2024-05-21T17:39:08+00:00"
+            "time": "2024-05-24T11:26:19+00:00"
         },
         {
             "name": "composer/installers",
@@ -1136,6 +1136,58 @@
             "time": "2024-02-05T11:35:39+00:00"
         },
         {
+            "name": "drupal/antibot",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/antibot.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/antibot-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "b26b603299ee3067e0aa3875ff752815f21d2f0b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1708358087",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "danrod",
+                    "homepage": "https://www.drupal.org/user/19150"
+                },
+                {
+                    "name": "gaurav.kapoor",
+                    "homepage": "https://www.drupal.org/user/3495331"
+                },
+                {
+                    "name": "mstef",
+                    "homepage": "https://www.drupal.org/user/107190"
+                }
+            ],
+            "description": "Prevent forms from being submitted without JavaScript enabled.",
+            "homepage": "https://www.drupal.org/project/antibot",
+            "support": {
+                "source": "https://git.drupalcode.org/project/antibot"
+            }
+        },
+        {
             "name": "drupal/codefilter",
             "version": "2.0.0-alpha3",
             "source": {
@@ -1846,6 +1898,75 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/honeypot",
+            "version": "2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/honeypot.git",
+                "reference": "2.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/honeypot-2.1.3.zip",
+                "reference": "2.1.3",
+                "shasum": "101105029a10a574ef6017824182500ab9905856"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/rules": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.3",
+                    "datestamp": "1695604754",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "https://www.drupal.org/user/389011",
+                    "email": "geerlingguy@mac.com"
+                },
+                {
+                    "name": "Manuel Garcia",
+                    "homepage": "https://www.drupal.org/user/213194"
+                },
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "vijaycs85",
+                    "homepage": "https://www.drupal.org/user/93488"
+                }
+            ],
+            "description": "Mitigates spam form submissions using the honeypot method.",
+            "homepage": "https://www.drupal.org/project/honeypot",
+            "keywords": [
+                "deterrent",
+                "form",
+                "honeypot",
+                "honeytrap",
+                "php",
+                "spam"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/honeypot",
+                "issues": "https://www.drupal.org/project/issues/honeypot"
+            }
         },
         {
             "name": "drupal/pathauto",
@@ -10197,16 +10318,16 @@
         },
         {
             "name": "react/promise",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c"
+                "reference": "8a164643313c71354582dc850b42b33fa12a4b63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
-                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/8a164643313c71354582dc850b42b33fa12a4b63",
+                "reference": "8a164643313c71354582dc850b42b33fa12a4b63",
                 "shasum": ""
             },
             "require": {
@@ -10258,7 +10379,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v3.1.0"
+                "source": "https://github.com/reactphp/promise/tree/v3.2.0"
             },
             "funding": [
                 {
@@ -10266,7 +10387,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-11-16T16:21:57+00:00"
+            "time": "2024-05-24T10:39:05+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -11415,16 +11536,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.10.0",
+            "version": "3.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "57e09801c2fbae2d257b8b75bebb3deeb7e9deb2"
+                "reference": "8f90f7a53ce271935282967f53d0894f8f1ff877"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/57e09801c2fbae2d257b8b75bebb3deeb7e9deb2",
-                "reference": "57e09801c2fbae2d257b8b75bebb3deeb7e9deb2",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/8f90f7a53ce271935282967f53d0894f8f1ff877",
+                "reference": "8f90f7a53ce271935282967f53d0894f8f1ff877",
                 "shasum": ""
             },
             "require": {
@@ -11491,7 +11612,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-05-20T08:11:32+00:00"
+            "time": "2024-05-22T21:24:41+00:00"
         },
         {
             "name": "symfony/browser-kit",
