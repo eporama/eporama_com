@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7792c966bf01f88e5f1a954c5e838b9",
+    "content-hash": "fe1404b0eb92331cb5ea24645234e0e1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1137,29 +1137,26 @@
         },
         {
             "name": "drupal/antibot",
-            "version": "2.0.3",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/antibot.git",
-                "reference": "2.0.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/antibot-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "b26b603299ee3067e0aa3875ff752815f21d2f0b"
+                "reference": "2ca90bdb50ec31798374e4c7c4be9acabf8bd67d"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1708358087",
+                    "version": "2.0.3+5-dev",
+                    "datestamp": "1712194722",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -1901,17 +1898,11 @@
         },
         {
             "name": "drupal/honeypot",
-            "version": "2.1.3",
+            "version": "dev-2.1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/honeypot.git",
-                "reference": "2.1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-2.1.3.zip",
-                "reference": "2.1.3",
-                "shasum": "101105029a10a574ef6017824182500ab9905856"
+                "reference": "025c382a365d441cf43a2514b2d66012bdd69e16"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
@@ -1921,12 +1912,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.1.x": "2.1.x-dev"
+                },
                 "drupal": {
-                    "version": "2.1.3",
-                    "datestamp": "1695604754",
+                    "version": "2.1.3+4-dev",
+                    "datestamp": "1697129532",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -12201,10 +12195,12 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/antibot": 20,
         "drupal/codefilter": 15,
         "drupal/geshifilter": 20,
         "drupal/gin": 20,
         "drupal/gin_toolbar": 20,
+        "drupal/honeypot": 20,
         "drupal/pathauto": 20,
         "drush/drush": 10
     },
