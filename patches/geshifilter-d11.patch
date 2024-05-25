@@ -1,0 +1,24 @@
+diff --git a/geshifilter.info.yml b/geshifilter.info.yml
+index 60109e9..3461fa0 100644
+--- a/geshifilter.info.yml
++++ b/geshifilter.info.yml
+@@ -2,5 +2,5 @@ name: 'GeSHi Filter'
+ description: 'Provides a filter to highlight source code using the GeSHi library (Generic Syntax Highlighter)'
+ type: module
+ package: 'Filters'
+-core_version_requirement: ^9.3 || ^10
++core_version_requirement: ^9.3 || ^10 || ^11
+ configure: admin/config/content/formats/geshifilter
+diff --git a/src/Plugin/Filter/GeshiFilterFilter.php b/src/Plugin/Filter/GeshiFilterFilter.php
+index dafab72..3ba9930 100644
+--- a/src/Plugin/Filter/GeshiFilterFilter.php
++++ b/src/Plugin/Filter/GeshiFilterFilter.php
+@@ -118,7 +118,7 @@ class GeshiFilterFilter extends FilterBase {
+       $result->addCacheTags($cache_tags);
+     }
+     catch (\Exception $e) {
+-      watchdog_exception('geshifilter', $e);
++      \Drupal\Component\Utility\DeprecationHelper::backwardsCompatibleCall(\Drupal::VERSION, '10.1.0', fn() => \Drupal\Core\Utility\Error::logException(\Drupal::logger('geshifilter'), $e), fn() => watchdog_exception('geshifilter', $e));
+       $this->messenger()->addError($geshi_library['error message']);
+     }
+

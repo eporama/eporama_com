@@ -61,7 +61,7 @@
                 "D11 patch": "https://git.drupalcode.org/project/honeypot/-/merge_requests/25.diff"
             },
 			"drupal/geshifilter": {
-				"D11 patch": "https://www.drupal.org/files/issues/2024-04-04/geshifilter.3.0.x-dev.rector.patch"
+				"D11 patch": "patches/geshifilter-d11.patch"
 			},
             "drupal/environment_indicator": {
                 "D11 patch": "patches/environment_indicator-d11.patch"
