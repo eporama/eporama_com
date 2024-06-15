@@ -6,8 +6,8 @@ index 097b644..76d8ae4 100644
  type: module
  description: Adds a color indicator for the different environments.
  package: Development
--core_version_requirement: ^9.2 || ^10
-+core_version_requirement: ^9.2 || ^10 || ^11
+-core_version_requirement: ^9.3 || ^10
++core_version_requirement: ^9.3 || ^10 || ^11
  
  scripts:
    - js/environment_indicator.js
