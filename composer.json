@@ -32,7 +32,8 @@
         "drupal/pathauto": "^1.11",
         "drupal/token": "^1.11",
         "drupal/toolbar_menu": "^3.0",
-        "drush/drush": "*",
+        "drupal/upgrade_status": "^4.3",
+        "drush/drush": "^12.5",
         "mglaman/composer-drupal-lenient": "^1.0"
     },
     "conflict": {
@@ -47,7 +48,10 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "cweagans/composer-patches": true,
-            "mglaman/composer-drupal-lenient": true
+            "mglaman/composer-drupal-lenient": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "extra": {
@@ -87,5 +91,8 @@
         },
         "patches": {
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "10.2.6"
     }
 }

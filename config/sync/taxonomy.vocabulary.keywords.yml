@@ -6,3 +6,4 @@ name: Keywords
 vid: keywords
 description: 'Site global keywords for posts'
 weight: 0
+new_revision: false
