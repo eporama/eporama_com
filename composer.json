@@ -26,7 +26,7 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/geshifilter": "3.0.x-dev@dev",
         "drupal/gin": "^3.0@dev",
-        "drupal/gin_toolbar": "^1.x-dev",
+        "drupal/gin_toolbar": "^1.0",
         "drupal/honeypot": "^2.1.x-dev",
         "drupal/pathauto": "^1.x-dev@dev",
         "drupal/upgrade_status": "^4.3",
