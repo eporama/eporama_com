@@ -1,0 +1,119 @@
+From 358958dfe702a1684fa6fb36efb264bccb6366d9 Mon Sep 17 00:00:00 2001
+From: niharika <niharika.s@virasatsolutions.com>
+Date: Thu, 26 Dec 2024 11:18:49 +0530
+Subject: [PATCH 1/3] update changes
+
+---
+ src/PathautoGenerator.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/PathautoGenerator.php b/src/PathautoGenerator.php
+index 5e50359..7d67e70 100644
+--- a/src/PathautoGenerator.php
++++ b/src/PathautoGenerator.php
+@@ -136,7 +136,7 @@ class PathautoGenerator implements PathautoGeneratorInterface {
+    * @param \Drupal\pathauto\AliasTypeManager $alias_type_manager
+    *   Manages pathauto alias type plugins.
+    */
+-  public function __construct(ConfigFactoryInterface $config_factory, ModuleHandlerInterface $module_handler, Token $token, AliasCleanerInterface $alias_cleaner, AliasStorageHelperInterface $alias_storage_helper, AliasUniquifierInterface $alias_uniquifier, MessengerInterface $pathauto_messenger, TranslationInterface $string_translation, TokenEntityMapperInterface $token_entity_mapper, EntityTypeManagerInterface $entity_type_manager, AliasTypeManager $alias_type_manager = NULL) {
++  public function __construct(ConfigFactoryInterface $config_factory, ModuleHandlerInterface $module_handler, Token $token, AliasCleanerInterface $alias_cleaner, AliasStorageHelperInterface $alias_storage_helper, AliasUniquifierInterface $alias_uniquifier, MessengerInterface $pathauto_messenger, TranslationInterface $string_translation, TokenEntityMapperInterface $token_entity_mapper, EntityTypeManagerInterface $entity_type_manager, ?AliasTypeManager $alias_type_manager = NULL) {
+     $this->configFactory = $config_factory;
+     $this->moduleHandler = $module_handler;
+     $this->token = $token;
+-- 
+GitLab
+
+
+From 7574ad78f26555acfd0084d1a30884aa9debd56e Mon Sep 17 00:00:00 2001
+From: Dutta-Sayan <sayan.dutta@innoraft.com>
+Date: Fri, 27 Dec 2024 16:37:03 +0530
+Subject: [PATCH 2/3] Issue #3495869: Removed the deprication error and
+ modified .gitlab-ci.yml.
+
+---
+ .gitlab-ci.yml                    | 5 +++++
+ src/AliasStorageHelper.php        | 2 +-
+ src/Commands/PathautoCommands.php | 4 ++--
+ 3 files changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/.gitlab-ci.yml b/.gitlab-ci.yml
+index 7d3d799..25d1489 100644
+--- a/.gitlab-ci.yml
++++ b/.gitlab-ci.yml
+@@ -59,6 +59,11 @@ composer (next major):
+     DRUPAL_CORE: $CORE_MAJOR_DEVELOPMENT
+     IGNORE_PROJECT_DRUPAL_CORE_VERSION: 1
+ 
++composer:
++  extends: .composer-base
++  variables:
++    PHP_VERSION: '8.4'
++
+ phpunit (next major):
+   variables:
+     SYMFONY_DEPRECATIONS_HELPER: "disabled"
+diff --git a/src/AliasStorageHelper.php b/src/AliasStorageHelper.php
+index ad8869d..02f0ce8 100644
+--- a/src/AliasStorageHelper.php
++++ b/src/AliasStorageHelper.php
+@@ -76,7 +76,7 @@ class AliasStorageHelper implements AliasStorageHelperInterface {
+    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+    *   The entity type manger.
+    */
+-  public function __construct(ConfigFactoryInterface $config_factory, AliasRepositoryInterface $alias_repository, Connection $database, MessengerInterface $messenger, TranslationInterface $string_translation, EntityTypeManagerInterface $entity_type_manager = NULL) {
++  public function __construct(ConfigFactoryInterface $config_factory, AliasRepositoryInterface $alias_repository, Connection $database, MessengerInterface $messenger, TranslationInterface $string_translation, ?EntityTypeManagerInterface $entity_type_manager = NULL) {
+     $this->configFactory = $config_factory;
+     $this->aliasRepository = $alias_repository;
+     $this->database = $database;
+diff --git a/src/Commands/PathautoCommands.php b/src/Commands/PathautoCommands.php
+index 9821ebf..0cafd57 100644
+--- a/src/Commands/PathautoCommands.php
++++ b/src/Commands/PathautoCommands.php
+@@ -86,7 +86,7 @@ class PathautoCommands extends DrushCommands {
+    *
+    * @aliases pag
+    */
+-  public function generateAliases($action = NULL, array $types = NULL) {
++  public function generateAliases($action = NULL, ?array $types = NULL) {
+     $batch = [
+       'title' => dt('Bulk updating URL aliases'),
+       'operations' => [
+@@ -132,7 +132,7 @@ class PathautoCommands extends DrushCommands {
+    *
+    * @aliases pad
+    */
+-  public function deleteAliases(array $types = NULL, $options = ['purge' => FALSE]) {
++  public function deleteAliases(?array $types = NULL, $options = ['purge' => FALSE]) {
+     $delete_all = count($types) === count($this->getAliasTypes());
+ 
+     // Keeping custom aliases forces us to go the slow way to correctly check
+-- 
+GitLab
+
+
+From cf801bdd1c07c9035a9f100c4f29ea3ab87897cc Mon Sep 17 00:00:00 2001
+From: Dutta-Sayan <sayan.dutta@innoraft.com>
+Date: Fri, 27 Dec 2024 16:54:39 +0530
+Subject: [PATCH 3/3] Issue #3495869: Fixed deprication warning in
+ UpdateAction.php
+
+---
+ src/Plugin/Action/UpdateAction.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Plugin/Action/UpdateAction.php b/src/Plugin/Action/UpdateAction.php
+index 3ec0a5d..a01b034 100644
+--- a/src/Plugin/Action/UpdateAction.php
++++ b/src/Plugin/Action/UpdateAction.php
+@@ -28,7 +28,7 @@ class UpdateAction extends ActionBase {
+   /**
+    * {@inheritdoc}
+    */
+-  public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
++  public function access($object, ?AccountInterface $account = NULL, $return_as_object = FALSE) {
+     $result = AccessResult::allowedIfHasPermission($account, 'create url aliases');
+     return $return_as_object ? $result : $result->isAllowed();
+   }
+-- 
+GitLab
+

@@ -92,6 +92,11 @@
         },
         "drupal-lenient": {
             "allowed-list": ["drupal/codefilter", "drupal/codefilter", "drupal/geshifilter", "drupal/pathauto", "drupal/ctools", "drupal/antibot", "drupal/admin_toolbar", "drupal/gin_toolbar", "drupal/antibot", "drupal/honeypot", "drupal/toolbar_menu", "drupal/environment_indicator", "drupal/entity_update", "drupal/antibot"]
+        },
+        "patches": {
+            "drupal/pathauto" : {
+                "8.4 deprecations": "patches/pathauto-92.patch"
+            }
         }
     }
 }
