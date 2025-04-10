@@ -29,6 +29,7 @@
         "drupal/honeypot": "^2.1.x-dev",
         "drupal/pathauto": "^1.x-dev@dev",
         "drupal/upgrade_status": "^4.3",
+        "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.0@beta",
         "mglaman/composer-drupal-lenient": "^1.0"
     },
