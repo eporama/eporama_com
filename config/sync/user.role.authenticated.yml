@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.1
     - filter.format.basic_html
-    - filter.format.webform_default
     - node.type.blog
   module:
     - comment
@@ -31,6 +30,5 @@ permissions:
   - 'revert blog revisions'
   - 'use text format 1'
   - 'use text format basic_html'
-  - 'use text format webform_default'
   - 'view blog revisions'
   - 'view own unpublished content'
