@@ -28,6 +28,7 @@
         "drupal/gin": "^5",
         "drupal/gin_toolbar": "^3",
         "drupal/honeypot": "^2.1.x-dev",
+        "drupal/markdown_easy": "^2.0",
         "drupal/pathauto": "^1.x-dev@dev",
         "drupal/upgrade_status": "^4.3",
         "drupal/webform": "^6.3@beta",

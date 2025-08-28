@@ -23,6 +23,7 @@ module:
   honeypot: 0
   image: 0
   link: 0
+  markdown_easy: 0
   menu_ui: 0
   mysql: 0
   node: 0

@@ -1,0 +1,34 @@
+uuid: 21e1e065-f22b-4d21-a865-9f9bb089edf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - markdown_easy
+_core:
+  default_config_hash: E07X6ihfUL42K5oeJuYKdhPpDwQRPymzcPSHi_4YGgk
+name: Markdown
+format: markdown
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -49
+    settings:
+      allowed_html: '<p> <em> <strong> <a href title> <img alt src title> <code> <pre> <blockquote> <ul> <ol> <li> <h1> <h2> <h3> <h4> <h5> <h6> <hr> <br> <del> <table> <thead> <tbody> <tr> <th class> <td class> <input checked disabled type>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  markdown_easy:
+    id: markdown_easy
+    provider: markdown_easy
+    status: true
+    weight: -50
+    settings:
+      flavor: github
