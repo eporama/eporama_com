@@ -24,7 +24,6 @@
         "drupal/core-project-message": "^11",
         "drupal/core-recommended": "^11",
         "drupal/environment_indicator": "^4.0",
-        "drupal/geshifilter": "3.0.x-dev@dev",
         "drupal/gin": "^5",
         "drupal/gin_toolbar": "^3",
         "drupal/honeypot": "^2.1.x-dev",
@@ -33,6 +32,7 @@
         "drupal/upgrade_status": "^4.3",
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.0@beta",
+        "league/html-to-markdown": "^5.1",
         "mglaman/composer-drupal-lenient": "^1.0"
     },
     "require-dev": {
