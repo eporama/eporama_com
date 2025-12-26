@@ -14,6 +14,8 @@ module:
   dblog: 0
   editor: 0
   environment_indicator: 0
+  environment_indicator_toolbar: 0
+  environment_indicator_ui: 0
   field: 0
   field_ui: 0
   file: 0
